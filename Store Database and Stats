@@ -1,0 +1,27 @@
+--Create a store database
+
+CREATE TABLE Inventory (id INTEGER PRIMARY KEY, item TEXT, price NUMERIC, available INTEGER, sold INTEGER);
+
+INSERT INTO Inventory VALUES
+(1, 'refractor telescope', 249.99, 11, 4),
+(2, 'camera', 524.99, 3, 7),
+(3, 'tripod', 75, 5, 5),
+(4, 'lens', 150, 7, 2),
+(5, 'guide to the night sky', 15, 23, 3),
+(6, 'red light', 9.99, 12, 7),
+(7, 'when to watch the moon', 15, 21, 4),
+(8, 'almanac of the night sky', 10, 3, 37),
+(9, 'astronomy for beginners', 10, 27, 13),
+(10, 'astrophsyics for nonscientists', 12, 7, 2),
+(11, 'where the planets are', 8, 9, 11),
+(12, 'sextant', 39.99, 5, 0),
+(13, 'reflector telescope', 249.99, 8, 7),
+(14, 'compass', 14.99, 3, 12),
+(15, 'star chart', 20, 7, 13);
+
+--dsiplay the database ordered by price.
+SELECT * FROM Inventory
+ORDER BY price ASC;
+
+What are the total sales?
+SELECT SUM(sold) 'Total Sales' FROM Inventory;
